@@ -15,6 +15,7 @@ import javax.validation.constraints.Size;
 
 @Entity
 public class User {
+	
 	@Id
 	@GeneratedValue( strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -23,13 +24,16 @@ public class User {
 	@Size( min = 1, max = 255, message = "Name must be between 1-255 characters.")
 	private String name;
 	
+	@Valid
 	@Email( message = "Invalid email format. Example: example@example.com.")
 	@Size( min = 1, message = "Email must be present. Example: example@example.com.")
 	private String email;
 	
+	@Valid
 	@Size( min = 1, message = "Password must be at least one character.")
 	private String password;
 	
+	@Valid
 	@Size( min = 1, message = "Passwords must match.")
 	@Transient
 	private String confirmPassword;
