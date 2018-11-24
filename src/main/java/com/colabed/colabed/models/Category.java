@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import javax.validation.Valid;
 import javax.validation.constraints.Size;
 
@@ -18,6 +19,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 @Entity
+@Table(name = "category")
 public class Category {
 
 	@Id
@@ -28,7 +30,7 @@ public class Category {
 	
     @ManyToOne
     @JoinColumn(name="field_id", nullable=false)
-    public Field fields;
+    public Field field;
     
     // One-to-Many association using generics (Owner)
 
@@ -63,12 +65,12 @@ public class Category {
 		this.id = id;
 	}
 
-	public Field getFields() {
-		return fields;
+	public Field getField() {
+		return field;
 	}
 
-	public void setFields(Field fields) {
-		this.fields = fields;
+	public void setField(Field field) {
+		this.field = field;
 	}
 
 	public Set<Subject> getSubjects() {

@@ -9,7 +9,7 @@ public class ResourceService {
 
 	private ResourceRepository resourceRepository;
 	
-	public ResourceService(ResourceService resourceService) {
+	public ResourceService(ResourceRepository resourceRepository) {
 		this.resourceRepository = resourceRepository;
 	}
 	
