@@ -96,4 +96,6 @@ public class Tag {
 		this.resources = resources;
 	}
 	
+	public Tag() {}
+	
 }

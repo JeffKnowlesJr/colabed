@@ -9,10 +9,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.Valid;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+
+import com.colabed.colabed.security.ValidPassword;
 
 @Entity
 public class User {
@@ -24,6 +27,14 @@ public class User {
 	@Valid
 	@Size( min = 1, max = 255, message = "User name must be between 1-255 characters.")
 	private String username;
+	
+    @NotEmpty
+    @ValidPassword
+    private String password;
+
+    @NotEmpty
+    @ValidPassword
+    private String confirmPassword;
 	
 	@Valid
 	@Email( message = "Invalid email format. Example: example@example.com.")
@@ -39,8 +50,6 @@ public class User {
 	private LocalDateTime updateDateTime;
 	
 	public User() {}
-	
-	
 	
 }
 

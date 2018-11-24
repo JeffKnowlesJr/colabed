@@ -111,4 +111,6 @@ public class Subject {
 		this.updateDateTime = updateDateTime;
 	}
 	
+	public Subject() {}
+	
 }
