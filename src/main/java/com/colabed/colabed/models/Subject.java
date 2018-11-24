@@ -12,6 +12,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.validation.Valid;
 import javax.validation.constraints.Size;
 
@@ -19,6 +20,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 @Entity
+@Table(name = "subjects")
 public class Subject {
 
 	@Id
@@ -29,7 +31,7 @@ public class Subject {
 	
     @ManyToOne
     @JoinColumn(name="subj_id", nullable=false)
-    public Subject subjects;
+    public Category category;
    
     // Many-to-Many association (Owner)
     
@@ -65,12 +67,12 @@ public class Subject {
 		this.id = id;
 	}
 
-	public Subject getSubjects() {
-		return subjects;
+	public Category getCategory() {
+		return category;
 	}
 
-	public void setSubjects(Subject subjects) {
-		this.subjects = subjects;
+	public void setCategory(Category category) {
+		this.category = category;
 	}
 
 	public Set<Tag> getTags() {
