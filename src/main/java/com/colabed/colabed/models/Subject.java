@@ -30,7 +30,7 @@ public class Subject {
     // One-to-Many association using generics (Owned)
 	
     @ManyToOne
-    @JoinColumn(name="subj_id", nullable=false)
+    @JoinColumn(name="cat_id", nullable=false)
     public Category category;
    
     // Many-to-Many association (Owner)
