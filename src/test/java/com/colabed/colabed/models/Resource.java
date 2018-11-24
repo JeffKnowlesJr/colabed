@@ -80,4 +80,6 @@ public class Resource {
 		this.updateDateTime = updateDateTime;
 	}
 	
+	public Resource() {}
+	
 }

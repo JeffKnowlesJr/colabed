@@ -89,4 +89,6 @@ public class Field {
 		this.updateDateTime = updateDateTime;
 	}
 	
+	public Field() {}
+	
 }
