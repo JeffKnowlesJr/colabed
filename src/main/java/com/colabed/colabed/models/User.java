@@ -15,8 +15,6 @@ import javax.validation.constraints.Size;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import com.colabed.colabed.security.ValidPassword;
-
 @Entity
 public class User {
 	
@@ -29,11 +27,9 @@ public class User {
 	private String username;
 	
     @NotEmpty
-    @ValidPassword
     private String password;
 
     @NotEmpty
-    @ValidPassword
     private String confirmPassword;
 	
 	@Valid
