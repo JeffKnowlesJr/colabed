@@ -52,7 +52,9 @@ public class Category {
 	@Column
 	@UpdateTimestamp
 	private LocalDateTime updateDateTime;
-
+	
+	public Category() {}
+	
 	public Long getId() {
 		return id;
 	}
@@ -108,7 +110,5 @@ public class Category {
 	public void setUpdateDateTime(LocalDateTime updateDateTime) {
 		this.updateDateTime = updateDateTime;
 	}
-	
-	public Category() {}
 	
 }

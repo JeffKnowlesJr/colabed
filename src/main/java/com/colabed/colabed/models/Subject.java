@@ -55,6 +55,8 @@ public class Subject {
 	@UpdateTimestamp
 	private LocalDateTime updateDateTime;
 
+	public Subject() {}
+	
 	public Long getId() {
 		return id;
 	}
@@ -110,7 +112,5 @@ public class Subject {
 	public void setUpdateDateTime(LocalDateTime updateDateTime) {
 		this.updateDateTime = updateDateTime;
 	}
-	
-	public Subject() {}
 	
 }

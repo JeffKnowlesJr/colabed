@@ -39,7 +39,9 @@ public class Resource {
 	@Column
 	@UpdateTimestamp
 	private LocalDateTime updateDateTime;
-
+	
+	public Resource() {}
+	
 	public Set<Tag> getTags() {
 		return tags;
 	}
@@ -79,7 +81,5 @@ public class Resource {
 	public void setUpdateDateTime(LocalDateTime updateDateTime) {
 		this.updateDateTime = updateDateTime;
 	}
-	
-	public Resource() {}
 	
 }
