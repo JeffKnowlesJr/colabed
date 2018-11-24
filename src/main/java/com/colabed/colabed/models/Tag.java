@@ -47,6 +47,8 @@ public class Tag {
 	@UpdateTimestamp
 	private LocalDateTime updateDateTime;
 	
+	public Tag() {}
+	
 	public Long getId() {
 		return id;
 	}
@@ -95,7 +97,5 @@ public class Tag {
 	public void setResources(Set<Resource> resources) {
 		this.resources = resources;
 	}
-	
-	public Tag() {}
 	
 }

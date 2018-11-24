@@ -11,5 +11,5 @@ import com.colabed.colabed.models.User;
 public interface UserRepository extends CrudRepository<User, Long> {
 	Optional<User> findById( Long id );
 	Optional<User> findByEmail( String email);
-	Optional<User> findByName( String name);
+	Optional<User> findByUsername( String username);
 }
